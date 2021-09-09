@@ -1,14 +1,17 @@
 import React from "react"
 import RecipeList from "./RecipeList";
+import "../css/app.css"
 
 
 
 
 
 function App() {
-  
+  const recipeRef = Object.keys(React.createRef());
   return (
-    <RecipeList recipes ={sampleRecipes}/>
+    <RecipeList recipes ={sampleRecipes}
+      key={recipeRef}
+    />
   )
   
 }
