@@ -5,7 +5,7 @@ export default function Ingredient({name,amount}) {
         <>
         <span>{name}</span> 
         <span>{amount}</span>
-            <br />
+            
         </>
     )
 }
