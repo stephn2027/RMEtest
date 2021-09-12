@@ -9,7 +9,6 @@ cursor: pointer;
 }
 .btn--primary{
  color: whitesmoke;
- margin-bottom: .5rem;
  background-color: hsl(200, 100%, 50%);
 }
 .btn--primary:hover{
