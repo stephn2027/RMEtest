@@ -1,15 +1,15 @@
 import React from "react";
 
-export default function RecipeEditIngredient() {
+export default function RecipeEditIngredient({ingredient}) {
   return (
-    <div className="recipe-edit__ingredient">
-      <div>
-        <input type="text" name="" id="" placeholder="add ingredient" />
-        <input type="text" name="" id="" placeholder="amount" />
-        <button>&times;</button>
-      </div>
+    
+      <>
+        <input type="text" className="recipe-edit__input" value={ingredient.name}/>
+        <input type="text" className="recipe-edit__input" value={ingredient.amount}/>
+        <button className="btn btn--danger">&times;</button>
+      </>
 
       
-    </div>
+    
   );
 }

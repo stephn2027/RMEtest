@@ -16,6 +16,7 @@ cursor: pointer;
     background-color: hsl(200, 100%, 35%);
 }
 .btn--danger{
+    text-align: center;
     color: whitesmoke;
     background-color: hsl(0, 100%, 50%);
    }
