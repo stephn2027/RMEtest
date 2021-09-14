@@ -18,8 +18,9 @@ export default function RecipeList({recipes}) {
       </div>
       
       <div className="recipe-list__add-recipe-btn-container">
-      <button onClick={handleRecipeAdd} 
-      className="btn btn--primary"
+      <button 
+       className="btn btn--primary"
+       onClick={handleRecipeAdd}
       
       >Add a recipe</button>
       </div>

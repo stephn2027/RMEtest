@@ -5,9 +5,12 @@ export default function Recipe(props){
      const {handleRecipeDelete,handleRecipeSelect} = useContext( RecipeContext );
      const {id,name,cookTime,servings,instructions,ingredients}=props;
   return (
-    <div className="recipe">
+    <div className="recipe" >
       <div className="recipe__header">
-        <h3 className="recipe__title">{name}</h3>
+        <h3 className="recipe__title"
+        >{name}
+        
+        </h3>
         <div>
           <button 
           className="btn btn--primary mr-1"
