@@ -12,13 +12,13 @@ const LOCAL_STORAGE_KEY = 'cookingWithReact.App[recipes]';//just a string name f
 export default function App() {
   const [recipes, setRecipes] = useState(sampleRecipes);//state for recipes
   const [selectedRecipeId, setSelectedRecipeId] = useState();//state for selected item to propagate to edit page
-  const selectedRecipe = recipes.find(recipe=>recipe.id === selectedRecipeId);
+  const selectedRecipe = recipes.find(recipe=>recipe.id === selectedRecipeId); //id of recipe that is selected or if there is one selected
   
  
   
   
  
-  const recipeContextValue ={
+  const recipeContextValue ={//context value that will be passed on diff. levels of nested components
     handleRecipeAdd,
     handleRecipeDelete,
     handleRecipeSelect,
@@ -26,7 +26,7 @@ export default function App() {
     
   };
 
-  
+  //persisting our local storage by using useEffect
 
   useEffect(()=>{
     const recipeKeyFromLocalStorage =  localStorage.getItem(LOCAL_STORAGE_KEY);
