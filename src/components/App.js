@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+
 import RecipeList from "./RecipeList";
 import RecipeEdit from "./RecipeEdit";
 
 import "../css/app.css"; //the only css import that connects different css components
+
 
 //used to propagate state to all levels of code. no need to transfer data in a stair like pattern
 export const RecipeContext = React.createContext();
@@ -14,7 +16,6 @@ export default function App() {
   const [selectedRecipeId, setSelectedRecipeId] = useState();//state for selected item to propagate to edit page
   const selectedRecipe = recipes.find(recipe=>recipe.id === selectedRecipeId); //id of recipe that is selected or if there is one selected
   
- 
   
   
  
@@ -36,6 +37,8 @@ export default function App() {
   useEffect(()=>{
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(recipes));
   },[recipes]);
+
+  
 
   function handleRecipeSelect(id){
     setSelectedRecipeId(id);
