@@ -11,7 +11,7 @@ export default function RecipeEditIngredient(props) {
 
  
   return (
-    <>
+    <React.Fragment>
       <input
         type="text"
         className="recipe-edit__input"
@@ -29,6 +29,6 @@ export default function RecipeEditIngredient(props) {
       onClick={()=>handleIngredientsDelete(ingredient.id)}
       >&times;
       </button>
-    </>
+    </React.Fragment>
   );
 }

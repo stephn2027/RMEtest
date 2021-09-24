@@ -25,7 +25,7 @@ export default function RecipeList({ recipes }) {
 
 
   return (
-    <>
+    <React.Fragment>
       <div className="recipe-list">
         <Search setSearchQuery={setSearchQuery} searchQuery={searchQuery} />
         <div>
@@ -43,6 +43,6 @@ export default function RecipeList({ recipes }) {
           </button>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 }

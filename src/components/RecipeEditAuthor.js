@@ -8,8 +8,9 @@ export default function RecipeEditAuthor(props) {
     }
 
     return (
-        <>
         
+        <React.Fragment>
+
              <input type="text"
              className="recipe-edit__input"
                 value={author.name}
@@ -24,7 +25,7 @@ export default function RecipeEditAuthor(props) {
               </button>
 
               
-         
-        </>
+         </React.Fragment>
+        
     )
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-
+// import base from '../Base'
 import RecipeList from "./RecipeList";
 import RecipeEdit from "./RecipeEdit";
 
 import "../css/app.css"; //the only css import that connects different css components
+
+
 
 
 //used to propagate state to all levels of code. no need to transfer data in a stair like pattern
@@ -26,6 +28,20 @@ export default function App() {
     handleRecipeChange,
     
   };
+
+  // useEffect(() => {
+  //   const ref = base.syncState( 'recipes', {
+  //     context: {
+  //       setState: ({ recipes }) => setRecipes({ ...recipes }),
+  //       state: { recipes },
+  //     },
+  //     state: 'fishes'
+  //   })
+
+  //   return () => {
+  //     base.removeBinding(ref);
+  //   }
+  // }, [recipes])
 
   //persisting our local storage by using useEffect
 
@@ -86,12 +102,14 @@ export default function App() {
   }
   
 
-  return <>
+  return (
+  
   <RecipeContext.Provider value={recipeContextValue}>
       <RecipeList recipes={recipes} />
       {selectedRecipe && <RecipeEdit recipe = {selectedRecipe}/>}
   </RecipeContext.Provider>
-  </>
+  
+  )
 }
 
 const sampleRecipes = [
