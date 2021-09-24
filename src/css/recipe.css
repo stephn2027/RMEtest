@@ -35,4 +35,7 @@
 .recipe__value--instructions{
   white-space: pre-wrap;  
 }
+.author-name{
+    padding-bottom: .4rem;
+}
 

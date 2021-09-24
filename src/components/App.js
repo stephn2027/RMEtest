@@ -67,6 +67,12 @@ export default function App() {
           amount: "",
         },
       ],
+      authors:[
+        {
+          id: uuidv4(),
+          name:"",
+        }
+      ]
     };
     setSelectedRecipeId(newRecipe.id);
     setRecipes([...recipes, newRecipe]);
@@ -107,6 +113,14 @@ const sampleRecipes = [
         amount: "1 tsp",
       },
     ],
+    authors: [
+      {
+        id: uuidv4(),
+        name: "Chef Robert",
+        
+      },
+      
+    ],
   },
   {
     id: uuidv4(),
@@ -126,6 +140,14 @@ const sampleRecipes = [
         name: "Paprika",
         amount: "1 tsp",
       },
+    ],
+    authors: [
+      {
+        id: uuidv4(),
+        name: "Chef John",
+        
+      },
+      
     ],
   },
 ];

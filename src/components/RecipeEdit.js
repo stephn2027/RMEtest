@@ -1,5 +1,6 @@
 import React,{useContext} from "react";
 import RecipeEditIngredient from "./RecipeEditIngredient";
+import RecipeEditAuthor from "./RecipeEditAuthor";
 import { RecipeContext } from "./App";
 import { v4 as uuidv4 } from "uuid";
 
@@ -15,8 +16,14 @@ export default function RecipeEdit({recipe}) {
     const newIngredients = [...recipe.ingredients];
     const index = newIngredients.findIndex(i=>i.id === id);
     newIngredients[index] = ingredient;
-    handleChange({ingredients:newIngredients})
+    handleChange({ingredients:newIngredients});
 
+  }
+  function handleAuthorChange(id,author){
+    const authorChange = [...recipe.authors];
+    const index = authorChange.findIndex(author=>author.id === id);
+    authorChange[index] = author;
+    handleChange({authors:authorChange});
   }
 
   function handleIngredientsAdd(){
@@ -28,8 +35,21 @@ export default function RecipeEdit({recipe}) {
     handleChange({ingredients:[...recipe.ingredients,newIngredientAdd]})
   }
 
+  function handleAuthorAdd(){
+    const newAuthor = {
+      id: uuidv4(),
+      name:"",
+
+    }
+    handleChange({authors:[...recipe.authors,newAuthor]})
+  }
+  
+
   function handleIngredientsDelete(id){
     handleChange({ingredients:recipe.ingredients.filter(ingredient=>ingredient.id !== id)})
+  }
+  function handleAuthorDelete(id){
+    handleChange({authors:recipe.authors.filter(author=> author.id !== id)})
   }
 
   return (
@@ -114,6 +134,32 @@ export default function RecipeEdit({recipe}) {
           className="btn btn--primary"
           onClick={()=>handleIngredientsAdd()}
           >Add ingredients</button>
+        </div>
+        <br />
+
+        <label className="recipe-edit__label">Author(s)</label>
+        <div className="recipe-edit__author-grid">
+            <div>Name</div>
+            <div></div>
+
+         {recipe.authors.map(author=>{
+           return <RecipeEditAuthor
+              key={author.id}
+              author={author}
+              handleAuthorChange={handleAuthorChange}
+              handleAuthorDelete={handleAuthorDelete}
+           />
+         })} 
+         
+          
+        </div>
+        <div className="recipe-edit__add-ingredients-btn-container">
+        <button
+        className="btn btn--primary"
+        onClick={()=>handleAuthorAdd()}
+        >Add Author
+
+        </button>
         </div>
     </div>
   );

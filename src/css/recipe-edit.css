@@ -63,13 +63,24 @@ textarea.recipe-edit__input{
 .recipe-edit__add-ingredients-btn-container{
     text-align: center;
 }
-.recipe-edit__ingredient-grid .recipe-edit__input{
+.recipe-edit__author-grid .recipe-edit__input,.recipe-edit__ingredient-grid .recipe-edit__input{
     text-align: center;
 }
 
 @media (max-width:1000px){
     .recipe-edit__details-grid,
-    .recipe-edit__ingredient-grid{
+    .recipe-edit__ingredient-grid,
+    .recipe-edit__author-grid
+    {
         grid-template-columns: 1fr;
     }
 }
+
+.recipe-edit__author-grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    margin: 1rem;
+    max-width: 15rem;
+ }

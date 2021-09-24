@@ -23,7 +23,7 @@ export default function Search({searchQuery,setSearchQuery}){
              id="recipe-search"
              placeholder="🔍 Search for recipes"
              name="search"
-             onChange = {e=>setSearchQuery(e.target.value)}
+             onChange ={e=>setSearchQuery(e.target.value)}
             className="recipe-list__search-bar"
             />
             <button 
