@@ -1,22 +1,19 @@
 import firebase from 'firebase';
-import Rebase from 're-base';
 
-const firebaseApp = firebase.initializeApp(
-    {
-        apiKey: "AIzaSyBjdj22Fa_whoMgx9h-O5r3ADxhiHsqmFE",
-        authDomain: "recipe-app-steph.firebaseapp.com",
-        databaseURL: "https://recipe-app-steph-default-rtdb.firebaseio.com",
-        projectId: "recipe-app-steph",
-        storageBucket: "recipe-app-steph.appspot.com",
-        messagingSenderId: "798233701822",
-        appId: "1:798233701822:web:6023b3de01389a9f099def",
-        measurementId: "G-MCRYQFKC7M"
-      }
-);
 
-const base = Rebase.createClass(firebaseApp.database());
 
-export {firebaseApp};
 
-export default base;
+const firebaseConfig = {
+  apiKey: "AIzaSyDTU7LfzwEq9z1mS2mcVz7yd7wh8PAbccA",
+  authDomain: "stephuy-react-recipe-app.firebaseapp.com",
+  projectId: "stephuy-react-recipe-app",
+  storageBucket: "stephuy-react-recipe-app.appspot.com",
+  messagingSenderId: "997336713673",
+  appId: "1:997336713673:web:e0302a4eacd16afa920018",
+  measurementId: "G-0ETLC9BYDG"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+export default firebase;
 

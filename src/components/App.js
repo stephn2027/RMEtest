@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-// import base from '../Base'
+import firebase from '../Base';
+
 import RecipeList from "./RecipeList";
 import RecipeEdit from "./RecipeEdit";
 
@@ -29,20 +30,19 @@ export default function App() {
     
   };
 
-  // useEffect(() => {
-  //   const ref = base.syncState( 'recipes', {
-  //     context: {
-  //       setState: ({ recipes }) => setRecipes({ ...recipes }),
-  //       state: { recipes },
-  //     },
-  //     state: 'fishes'
-  //   })
+  // useEffect(()=>{
+  //   firebase.database().ref('recipes')
+  //       // Sync the data.
+  //       .on('value', snapshot => {
+  //           if (snapshot.val())
+  //               setRecipes(snapshot.val());
+  //       });
+  // },[]);
 
-  //   return () => {
-  //     base.removeBinding(ref);
-  //   }
-  // }, [recipes])
-
+  useEffect(() => {
+    firebase.database().ref('recipes').set(recipes)
+ }, [recipes])
+  
   //persisting our local storage by using useEffect
 
   useEffect(()=>{
