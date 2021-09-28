@@ -1,8 +1,11 @@
 .recipe{
  padding: 1rem;
  padding-bottom: 2rem;
- border-bottom: 1px solid black;
+ border-bottom: 4px solid rgb(197, 193, 193);
+ text-shadow: -.1px .5px .5px rgba(59, 59, 59,.6);
+ 
 }
+
 .recipe:last-child{
     border-bottom: none;
     padding-bottom: 1rem;
@@ -25,7 +28,8 @@
     margin-right: .2rem;
 }
 .recipe__value{
-    font-weight: 300;
+    font-weight: 500;
+    
 }
 
 .recipe__value--indented{

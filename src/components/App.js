@@ -103,12 +103,15 @@ export default function App() {
   
 
   return (
-  
+    <div className="background" >
   <RecipeContext.Provider value={recipeContextValue}>
-      <RecipeList recipes={recipes} />
+      
+      <RecipeList recipes={recipes} /> 
+      
       {selectedRecipe && <RecipeEdit recipe = {selectedRecipe}/>}
+     
   </RecipeContext.Provider>
-  
+  </div>
   )
 }
 

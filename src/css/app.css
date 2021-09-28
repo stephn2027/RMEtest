@@ -12,11 +12,21 @@
 }
 html{
     font-size: 1.4rem;
+    
+    -webkit-text-stroke: .1px rgb(68, 69, 70);
+    
 }
 body{
     padding: 0;
     margin: 0;
+    
 }
 .mr-1{
  margin-right: .3rem;
+}
+.background{
+ background:linear-gradient(150deg, #e2d582, #dab434e3, #a27416c7) no-repeat;
+ background-size:contain;
+ width: 100%;
+ height: max-content;
 }
