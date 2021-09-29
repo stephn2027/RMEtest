@@ -2,15 +2,13 @@ import React from 'react'
 
 
 export default function Search({searchQuery,setSearchQuery}){
-    const onSubmit = (e)=>{
-        e.preventDefault()
-    };
+  
     return (
         <form 
         action="/" method="get"
         className="recipe-list__search-bar-form"
         
-        onSubmit={onSubmit}
+        onSubmit={e=>e.preventDefault()}
             >
             <label htmlFor="recipe-search">
                 <span className="visually-hidden">
