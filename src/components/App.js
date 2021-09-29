@@ -30,17 +30,18 @@ export default function App() {
     
   };
 
-  // useEffect(()=>{
-  //   firebase.database().ref('recipes')
-  //       // Sync the data.
-  //       .on('value', snapshot => {
-  //           if (snapshot.val())
-  //               setRecipes(snapshot.val());
-  //       });
-  // },[]);
+  useEffect(()=>{
+    firebase.database().ref('recipes')
+        // Sync the data.
+        .on('value', snapshot => {
+            if (snapshot.val())
+                setRecipes(snapshot.val());
+        });
+  },[]);
 
   useEffect(() => {
     firebase.database().ref('recipes').set(recipes)
+    firebase.database().ref('recipes').update(recipes)
  }, [recipes])
   
   //persisting our local storage by using useEffect
