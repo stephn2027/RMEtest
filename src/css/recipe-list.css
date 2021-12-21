@@ -1,8 +1,9 @@
 .recipe-list{
- border-right: 4px solid rgb(197, 193, 193);
+ 
  min-height: 100vh;
- width: 50%;
- margin-left:1rem;
+ width: 100%;
+ padding: 1rem;
+ transition: all ease-in 2s ;
 }
 .recipe-list__add-recipe-btn-container{
  text-align: center;
@@ -14,6 +15,14 @@
    padding: 2rem 1rem 2rem 1rem;
     
 
+}
+.row{
+
+    --bs-gutter-x: 0rem;
+}
+.col .recipe-list{
+   
+    border-right: 1px solid rgb(197, 193, 193);
 }
 
 

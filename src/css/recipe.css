@@ -2,8 +2,8 @@
  padding: 1rem;
  padding-bottom: 2rem;
  border-bottom: 4px solid rgb(197, 193, 193);
- text-shadow: -.1px .5px .5px rgba(59, 59, 59,.6);
- 
+ /* text-shadow: -.1px .5px .5px rgba(59, 59, 59,.6); */
+ color: #ffff;
 }
 
 .recipe:last-child{
@@ -14,11 +14,17 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+.recipe-buttons{
+    display: block;
+    margin-block: auto;
 }
 .recipe__title{
     margin:0;
     font-size: 1.5rem;
+    color: rgb(221, 168, 33);
 }
 .recipe__row{
     margin-top: 1rem;

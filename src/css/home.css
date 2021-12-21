@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+.header-wrapper{
+    width: 100%;
+    margin: 0;
+    padding:0;
+    height: 17rem;
+    
+    line-height: .5;
+
+background-color: #f6c716;
+opacity: 0.8;
+background-image: radial-gradient(circle at center center, #fafafa, #f6c716), repeating-radial-gradient(circle at center center, #fafafa, #fafafa, 4px, transparent 8px, transparent 4px);
+background-blend-mode: multiply;
+    
+}
+.text-wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    align-tracks: center;
+    padding:5rem 3rem 0rem 3rem;
+    justify-content: center;
+
+}
+.text-sub{
+    display: flex;
+    justify-content: center;
+    color: #3aa5a8;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.3rem;
+}
+.text-center{
+    font-family:'Smooch','Luxurious Script', cursive;
+    font-size: 4.4rem;
+    color: #3aa5a8;
+    font-weight: 400;
+    padding-right: .8rem;
+    
+}
+.text-between{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dash{
+  color: #3aa5a8;
+  font-size: 2rem; 
+  
+
+
+}

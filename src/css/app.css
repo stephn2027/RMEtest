@@ -5,7 +5,9 @@
 @import './recipe.css';
 @import './ingredient-list.css';
 @import './recipe-edit.css';
-
+@import './no-recipe.css';
+@import './home.css';
+@import './footer.css';
 *,*::before,*::after{
     font-family: Gotham Rounded, sans-serif;
     box-sizing: border-box;
@@ -13,7 +15,7 @@
 html{
     font-size: 1.4rem;
     
-    -webkit-text-stroke: .1px rgb(68, 69, 70);
+    /* -webkit-text-stroke: 1px rgb(68, 69, 70); */
     
 }
 body{
@@ -25,8 +27,21 @@ body{
  margin-right: .3rem;
 }
 .background{
- background:linear-gradient(150deg, #e2d582, #dab434e3, #a27416c7) no-repeat;
- background-size:contain;
+ background:#068f94;
+ background-size:100%;
  width: 100%;
  height: max-content;
+ border-radius: .5rem;
+ padding: 1rem;
+ margin: 1rem;
+ transition: ease-in 1s;
+ 
+}
+.wrapper{
+    
+    background-color: cornsilk;
+    padding-bottom: 3rem;
+}
+.container{
+    transition: ease-in .4s;
 }

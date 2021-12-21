@@ -4,8 +4,11 @@ import RecipeEditAuthor from "./RecipeEditAuthor";
 import { RecipeContext } from "./App";
 import { v4 as uuidv4 } from "uuid";
 
-export default function RecipeEdit({recipe}) {
+export default function RecipeEdit({recipe,info}) {
   const {handleRecipeChange,handleRecipeSelect} =  useContext(RecipeContext);
+
+  const edit = document.querySelector("#root > div > div > div > div.recipe-edit");
+  console.log(edit)
   //helper function to handle multiple input changes so we dont have to repeat putting the handlerecipechange function in every input
   function handleChange(changes){
     handleRecipeChange(recipe.id,{...recipe,...changes})
@@ -51,7 +54,7 @@ export default function RecipeEdit({recipe}) {
   function handleAuthorDelete(id){
     handleChange({authors:recipe.authors.filter(author=> author.id !== id)})
   }
-
+  
   return (
     <div className="recipe-edit">
       <div className="recipe-edit__remove-button-container">
@@ -161,6 +164,7 @@ export default function RecipeEdit({recipe}) {
 
         </button>
         </div>
-    </div>
+    </div> 
   );
+        
 }

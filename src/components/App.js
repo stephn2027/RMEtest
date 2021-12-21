@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import firebase from '../Base';
-
+import NoRecipesSelected from "./NoRecipesSelected";
 import RecipeList from "./RecipeList";
 import RecipeEdit from "./RecipeEdit";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Row,Col} from 'react-bootstrap';
 import "../css/app.css"; //the only css import that connects different css components
-
+import {gsap} from 'gsap';
 
 
 
@@ -18,7 +19,7 @@ export default function App() {
   const [recipes, setRecipes] = useState(sampleRecipes);//state for recipes
   const [selectedRecipeId, setSelectedRecipeId] = useState();//state for selected item to propagate to edit page
   const selectedRecipe = recipes.find(recipe=>recipe.id === selectedRecipeId); //id of recipe that is selected or if there is one selected
-  
+  const timeline=gsap.timeline();
   
   
  
@@ -37,6 +38,7 @@ export default function App() {
             if (snapshot.val())
                 setRecipes(snapshot.val());
         });
+        timeline.from('.background',{y:800,opacity:0,ease:'back.out(1.2)',duration:1.2,delay:1});
   },[]);
 
   useEffect(() => {
@@ -106,11 +108,19 @@ export default function App() {
   return (
     <div className="background" >
   <RecipeContext.Provider value={recipeContextValue}>
-      
+      <Row>
+      <Col>
+
       <RecipeList recipes={recipes} /> 
-      
-      {selectedRecipe && <RecipeEdit recipe = {selectedRecipe}/>}
+      </Col>
+      <Col className="col">
+     {selectedRecipe?selectedRecipe && <RecipeEdit recipe = {selectedRecipe}/>:<NoRecipesSelected/>}
+
+      </Col>
      
+      </Row>
+     
+      
   </RecipeContext.Provider>
   </div>
   )

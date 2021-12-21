@@ -1,0 +1,11 @@
+.footer-wrapper{
+    width: 100%;
+    height: max-content;
+    background-color: darkslategray;
+    padding:.8rem ;
+    text-align: center;
+}
+.footer-wrapper p{
+    margin:0;
+    color: darkorange;
+}

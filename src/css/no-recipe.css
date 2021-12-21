@@ -1,0 +1,15 @@
+.no-recipe-display{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: max-content;
+    margin: 3rem;
+    justify-self: center;
+    align-content: center;
+    
+    color: rgb(223, 175, 19);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+    
+}

@@ -10,7 +10,7 @@ export default function Recipe(props) {
     <div className="recipe">
       <div className="recipe__header">
         <h3 className="recipe__title">{name}</h3>
-        <div>
+        <div className="recipe-buttons">
           <button
             className="btn btn--primary mr-1"
             onClick={() => handleRecipeSelect(id)}
