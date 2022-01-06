@@ -9,7 +9,7 @@
 @import './home.css';
 @import './footer.css';
 *,*::before,*::after{
-    font-family: Gotham Rounded, sans-serif;
+   
     box-sizing: border-box;
 }
 html{
@@ -35,6 +35,7 @@ body{
  padding: 1rem;
  margin: 1rem;
  transition: ease-in 1s;
+ margin-inline: auto;
  
 }
 .wrapper{
@@ -45,3 +46,4 @@ body{
 .container{
     transition: ease-in .4s;
 }
+

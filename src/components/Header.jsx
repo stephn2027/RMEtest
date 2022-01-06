@@ -11,7 +11,7 @@ useEffect(()=>{
     return (
         <div className="header-wrapper">
         <div className="text-wrapper">
-            <p><span className="dash">---</span><span className="text-between"><i className="fas fa-quote-left" style={{color:"maroon"}}>"</i>Your</span><span className="text-center">Personal</span><span className="text-between">Recipes<i className="fas fa-quote-right" style={{color:"maroon"}}>"</i></span><span className="dash">---</span></p>
+            <p><span className="dash">---</span><span className="text-between"><i className="fas fa-quote-left" style={{color:"maroon",fontSize:"clamp(1rem,3.4vw,1.5rem)"}}></i>Your</span><span className="text-center">Personal</span><span className="text-between">Recipes<i className="fas fa-quote-right" style={{color:"maroon",fontSize:"clamp(1rem,3.4vw,1.5rem)"}}></i></span><span className="dash">---</span></p>
             
         </div>
         <div ><span className="text-sub">manage your collections!</span></div>

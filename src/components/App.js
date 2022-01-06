@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col} from 'react-bootstrap';
 import "../css/app.css"; //the only css import that connects different css components
 import {gsap} from 'gsap';
+import Header from "./Header";
 
 
 
@@ -38,7 +39,7 @@ export default function App() {
             if (snapshot.val())
                 setRecipes(snapshot.val());
         });
-        timeline.from('.background',{y:800,opacity:0,ease:'back.out(1.2)',duration:1.2,delay:1});
+        timeline.from('.background',{y:900,opacity:0,ease:'back.out(1.2)',duration:1.2,delay:.3});
   },[]);
 
   useEffect(() => {
@@ -106,6 +107,10 @@ export default function App() {
   
 
   return (
+    <React.Fragment>
+    <div className="wrapper">
+    <Header/>
+    <div className="container">
     <div className="background" >
   <RecipeContext.Provider value={recipeContextValue}>
       <Row>
@@ -119,10 +124,15 @@ export default function App() {
       </Col>
      
       </Row>
-     
-      
+   
   </RecipeContext.Provider>
   </div>
+    </div>
+    </div>
+    
+   
+    
+  </React.Fragment>
   )
 }
 
