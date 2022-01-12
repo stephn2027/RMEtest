@@ -1,15 +1,16 @@
 .no-recipe-display{
     display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
     height: max-content;
-    margin: 3rem;
+    margin: 3rem 1rem;
     justify-self: center;
-    align-content: center;
-    
+    align-self: center;
+    text-align: center;
     color: rgb(223, 175, 19);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5;
     font-weight: 600;
-    
+    max-width: 1400px;
 }

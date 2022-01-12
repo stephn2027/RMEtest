@@ -30,6 +30,7 @@ body{
  background:#068f94;
  background-size:100%;
  width: 100%;
+ max-width: 1800px;
  height: max-content;
  border-radius: .5rem;
  padding: 1rem;
@@ -42,8 +43,13 @@ body{
     
     background-color: cornsilk;
     padding-bottom: 3rem;
+   height: max-content;
+   width: 100%;
 }
 .container{
     transition: ease-in .4s;
+    height: max-content;
+    width: 100%;
 }
+
 

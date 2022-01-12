@@ -1,6 +1,7 @@
 .container{
- height:90vh;
- max-width: 700px;
+ height: max-content;
+ max-width: 1400px;
+ width: 100%;
  margin-inline: auto;
  padding-top: 20px;
 }

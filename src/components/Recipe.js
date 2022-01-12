@@ -1,11 +1,21 @@
-import React, { useContext } from "react";
-import IngredienstList from "./IngredientsList";
-import { RecipeContext } from "./App";
-import AuthorList from "./AuthorList";
+import React, { useContext } from 'react';
+import IngredienstList from './IngredientsList';
+import { RecipeContext } from './App';
+import AuthorList from './AuthorList';
 
 export default function Recipe(props) {
   const { handleRecipeDelete, handleRecipeSelect } = useContext(RecipeContext);
-  const { id, name, cookTime, servings, instructions, ingredients , authors } = props;
+  const {
+    id,
+    name,
+    cookTime,
+    servings,
+    instructions,
+    ingredients,
+    authors,
+    user,
+  } = props;
+
   return (
     <div className="recipe">
       <div className="recipe__header">
@@ -14,12 +24,14 @@ export default function Recipe(props) {
           <button
             className="btn btn--primary mr-1"
             onClick={() => handleRecipeSelect(id)}
+            disabled={user ? false : true}
           >
             Edit
           </button>
           <button
             className="btn btn--danger"
             onClick={() => handleRecipeDelete(id)}
+            disabled={user ? false : true}
           >
             Delete
           </button>

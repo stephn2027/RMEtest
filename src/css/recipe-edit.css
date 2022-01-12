@@ -68,7 +68,7 @@ textarea.recipe-edit__input{
     text-align: center;
 }
 
-@media (max-width:1000px){
+@media (max-width:1500px){
     .recipe-edit__details-grid,
     .recipe-edit__ingredient-grid,
     .recipe-edit__author-grid
