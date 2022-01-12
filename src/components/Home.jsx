@@ -29,7 +29,7 @@ export default function Home() {
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/recipes" element={(!user)?<Navigate to="/login"/>:<App user={user}/> } />
           <Route path="/login" element={<LoginForm user={user}/>} />
-          <Route exact path="/" element={<Welcome />}></Route>
+          <Route exact path="/" element={<App />}></Route>
           <Route path="/not-found" element={<NotFound></NotFound>}></Route>
           <Route path="*" element={<Navigate to="/not-found" />}></Route>
         </Routes>

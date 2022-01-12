@@ -35,7 +35,7 @@ class LoginForm extends Form {
       console.log(user);
     return (
       user? <Navigate to="/recipes"/>:  
-      <div className="container">
+      <div className="container-form">
         <h1>Login</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput('username', 'Username')}
