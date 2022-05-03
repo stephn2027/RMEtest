@@ -32,7 +32,7 @@ class LoginForm extends Form {
 
   render() {
       const {user} = this.props;
-      console.log(user);
+      
     return (
       user? <Navigate to="/recipes"/>:  
       <div className="container-form">
